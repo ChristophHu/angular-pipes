@@ -6,3 +6,13 @@
 <h2 class="text-xl font-bold">Custom Pipes</h2>
 <h3 class="text-lg font-medium">Shorten-Pipe</h3>
 <p>{{ lp | shorten:0:11 }}</p>
+
+<h3 class="text-lg font-medium">OrderBy-Pipe</h3>
+<ul>
+    <li *ngFor="let fruit of (fruits | orderBy:'name':'DESC')">{{ fruit.name }}</li>
+</ul>
+
+<h3 class="text-lg font-medium">Multiple OrderBy-Pipe</h3>
+<ul>
+    <li *ngFor="let fruit of (fruits | orderBy:'name' | orderBy:'priority')">{{ fruit.name }}</li>
+</ul>
