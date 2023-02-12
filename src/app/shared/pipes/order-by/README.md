@@ -1,7 +1,7 @@
 # OrderBy
 
 ## Nutzung
-Diese Pipe sortiert ein Array.
+Diese Pipe sortiert ein Array von Objekten nach einer Eigenschaft.
 
 ## Beispiel
 ```html
