@@ -17,4 +17,19 @@ export class AppComponent {
     { id: 5, name: 'Banana',       priority: '2' },
     { id: 6, name: 'Blueberries',  priority: '1' }
   ]
+
+  humidity = [
+    {
+      name: 'server1',
+      humidity: '80.9'
+    },
+    {
+      name: 'server2',
+      humidity: '30.9',
+    },
+    {
+      name: 'server3',
+      humidity: '53.9',
+    }
+  ]
 }

@@ -18,3 +18,25 @@
 
 <h3 class="text-lg font-medium">Truncate-Pipe</h3>
 <p>{{ lp | truncate:0:100:'...' }}</p>
+
+<h3 class="text-lg font-medium">SVG-Attribut</h3>
+<div *ngFor="let item of humidity;let i = index">
+	<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 30 42" aria-hidden="true"
+		attr.fill="url(#color-{{i}})">
+		<defs>
+			<linearGradient id="color-{{i}}" x1="0%" y1="100%" x2="0%" y2="0%">
+				<stop offset="0%" stop-color="rgb(132, 219, 255)" />
+				<stop [attr.offset]="item.humidity | humidity" stop-color="rgb(132, 219, 255)" />
+				<stop [attr.offset]="item.humidity | humidity" stop-color="rgb(255, 255, 255)" />
+				<stop offset="100%" stop-color="rgb(255, 255, 255)" />
+			</linearGradient>
+		</defs>
+
+		<g transform="translate(35,65)">
+			<path id="scale" stroke="#000" stroke-width="1.5" d="M15 3
+                                Q20.5 12.8 40 35
+                                A28.8 28.8 0 1 1 0 30
+                                Q20.5 12.8 15 3z" />
+		</g>
+	</svg>
+</div>
